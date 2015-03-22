@@ -1,20 +1,24 @@
-CODE BOOK: dataTidy
+#Code Book: dataTidy
 
 ===================
 
 						
-###Dimensions: 180 rows by 68 columns
+##Dimensions: 180 rows by 68 columns
 
 
-Notes: 
+###Notes: 
+
 1. For extra info on "DESCRIPTION" column, please see "NOTES" column for relevant notes which can be found at the bottom of the page.
+
 2. All features (not including "Subject" and "YActivities") are normalized and bounded within [-1,1].
+
 3. Please see "features_info.txt" for more information on the original data set columns, and "README.txt" for additional information.
+
 4. Units are not applicable for any of the variables, as all measure variables have been normalized and Subject and YActivities do not have units of 	measurement.
 
 
 
-| COL: | VARNAME:                | DESCRIPTION:                                                                                                | RANGE/VALUES:                                                                                    | CLASS:                                | NOTES      |
+| COL: | VARNAME:                | DESCRIPTION:                                                                                                | RANGE/VALUES:                                                                                    | CLASS:                                | NOTES:      |
 |------|-------------------------|-------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|---------------------------------------|------------|
 | 1    | Subject                 | Subject (19 - 48 years old) who performed activity.                                                         | 1..30                                                                                            | integer; unique identifier (discrete) |            |
 | 2    | YActivities             | Activity names mapped to labels (Y values) in raw dataset. (Labels, 1-6, not retained in tidyData)          | WALKING (1), WALKING_UPSTAIRS (2), WALKING_DOWNSTAIRS (3), SITTING (4), STANDING (5), LAYING (6) | factor, 6 levels                      |            |
@@ -86,10 +90,10 @@ Notes:
 |      | fBodyGyroJerkMag-std()  | Mean, by Subject and YActivity, of standard deviation of the FFT of the magnitude of angular velocity jerk  | [-0.03985738,0.28783462]                                                                         | numeric, continuous                   | A, B, C, D |
 
 
-A	These features come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.  and filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Acceleration readings were separated into body and gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz. The body acceleration signal is obtained by subtracting the gravity from the total acceleration (measured in units of 'g').
+A:	These features come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.  and filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Acceleration readings were separated into body and gravity acceleration signals using another low pass Butterworth filter with a corner frequency of 0.3 Hz. The body acceleration signal is obtained by subtracting the gravity from the total acceleration (measured in units of 'g').
 
-B	Subsequently, the body linear acceleration and angular velocity (radians/sec) were derived in time to obtain Jerk signals.
+B:	Subsequently, the body linear acceleration and angular velocity (radians/sec) were derived in time to obtain Jerk signals.
 
-C	The magnitude of these three-dimensional signals were calculated using the Euclidean norm.
+C:	The magnitude of these three-dimensional signals were calculated using the Euclidean norm.
 
-D	Finally a Fast Fourier Transform (FFT) was applied to some of these signals. (Note the 'f' to indicate frequency domain signals). 
+D:	Finally a Fast Fourier Transform (FFT) was applied to some of these signals. (Note the 'f' to indicate frequency domain signals). 
