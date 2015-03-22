@@ -1,3 +1,7 @@
+#Instructions List
+
+==================
+
 This file explains how to run the code in run_analysis.R in order to obtain the tidy data set from the Samsung data.
 
 
@@ -35,7 +39,7 @@ There are comments in the run_analysis.R script delineating which segments of co
 		Uses reshape2 library's melt function along with dcast function to obtain the mean of each measure variable by Subject and activity 				(YActivity). 
 
 
-c) The final tidy dataset is called "dataTidy". In order to view the data in R, you can run the command: 
+C) The final tidy dataset is called "dataTidy". In order to view the data in R, you can run the command: 
 
 	View(dataTidy) 
 
