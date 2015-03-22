@@ -1,15 +1,16 @@
-This file explains how to run the code in run_analysis.R in order to obtained the tidy data set from the Samsung data.
+This file explains how to run the code in run_analysis.R in order to obtain the tidy data set from the Samsung data.
 
 
-Prerequisites: The Samsung data is already in you working directory. It is assumed that you have left all files in their original paths in the folder "UCI HAR Dataset", which is a result of unzipping the dataset and putting it in your working directory. Also, make sure you install the packages "stringr" and "reshape2" from CRAN prior to running the script.
+Prerequisites: The Samsung data is already in you working directory. It is assumed that you have left all files in their original paths in the folder "UCI HAR Dataset", which is a result of unzipping the dataset and putting it in your working directory. Also, make sure you install the packages "stringr" and "reshape2" from CRAN prior to running the script. (install.packages("reshape2"), install.packages("stringr")). 
 
-Note: Please see the CodeBook.md for detailed information on each variable in dataTidy. If you need additional information on how the original data was collected, please refer to features_info.txt and the README.txt file which are included in the "UCI HAR Dataset" folder.
+Note: Please see the CodeBook.md for detailed information on each variable in dataTidy, the resultant tidy data set. If you need additional information on how the original data was collected, please refer to features_info.txt and the README.txt file which are included in the "UCI HAR Dataset" folder.
 
 
 A) Open run_analysis.R in R.
 
 B) Select all the text in this file and run.
-	There are comments in the run_analysis script delineating which segments of code correspond to each of the 5 steps in the Course Project 	instructions. However, below is a bit more detail on the transformations occurring:
+
+There are comments in the run_analysis.R script delineating which segments of code correspond to each of the 5 steps in the Course Project 		instructions. However, below is a bit more detail on the transformations occurring:
 
 	Step 1: "Merges the training and the test sets to create one data set."
 		
@@ -31,20 +32,20 @@ B) Select all the text in this file and run.
 
 	Step 5: "From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each 			subject."
 	
-		Uses reshape library's melt function along with dcast function to obtain the mean of each measure variable by Subject and activity 				(YActivity). 
+		Uses reshape2 library's melt function along with dcast function to obtain the mean of each measure variable by Subject and activity 				(YActivity). 
 
 
 c) The final tidy dataset is called "dataTidy". In order to view the data in R, you can run the command: 
 
-View(dataTidy) 
+	View(dataTidy) 
 
 In order to write dataTidy to a csv, use the command: 
 
-write.table(dataTidy, file = "dataTidy.txt", row.names = FALSE).  
+	write.table(dataTidy, file = "dataTidy.txt", row.names = FALSE).  
 
 In order to read the data back in, use the command: 
 
-read.table("dataTidy.txt", header = TRUE)
+	read.table("dataTidy.txt", header = TRUE)
 
 
 
