@@ -8,7 +8,7 @@ Note: Please see the CodeBook.md for detailed information on each variable in da
 
 A) Open run_analysis.R in R.
 
-B) Either select all the text in this file and run.
+B) Select all the text in this file and run.
 	There are comments in the run_analysis script delineating which segments of code correspond to each of the 5 steps in the Course Project 	instructions. However, below is a bit more detail on the transformations occurring:
 
 	Step 1: "Merges the training and the test sets to create one data set."
